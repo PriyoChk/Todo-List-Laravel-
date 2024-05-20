@@ -31,5 +31,5 @@ Route::get('/delete/{id}',[todoController::class,'delete'])->name("todo.delete")
 //update todo route
 Route::post('/update',[todoController::class,'updateData'])->name("todo.updateData");
 
-
+Route::get('/welcome/{id}',[todoController::class,'Complete'])->name("todo.Complete");
 

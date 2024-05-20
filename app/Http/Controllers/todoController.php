@@ -92,5 +92,13 @@ class todoController extends Controller
         return redirect(route("todo.home"));
 
     }
+
+    public function Complete($id){
+
+        $todo=todos::find($id);
+        $todo->Completed_at=now(); 
+        $todo->save();
+        return redirect(route("todo.home"));
+    }
 }
     

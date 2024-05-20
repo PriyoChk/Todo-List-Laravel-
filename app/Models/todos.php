@@ -12,5 +12,8 @@ class todos extends Model
     protected $primary_key='id';
 
 
-
+    public function isComplete()
+    {
+        return $this->Completed_at !== null;
+    }
 }

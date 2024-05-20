@@ -17,6 +17,7 @@
             <th>Work</th>
             <th>Due Date</th>
             <th>Action</th>
+            <th>Condition</th>
             
         </tr>
         @foreach($todos as $todo)
@@ -27,15 +28,32 @@
           
             <td >
             
+            @if(!$todo->isComplete())
+                <a href="{{route("todo.edit",$todo->id)}}" class="btn btn-success btn-sm">Update</a>
+            @endif
             
-            <a href="{{route("todo.edit",$todo->id)}}" class="btn btn-success btn-sm">Update</a>
+            @if($todo->isComplete())   
             <a href="{{route("todo.delete",$todo->id)}}" class="btn btn-danger btn-sm" >Delete</a>
-        
-    </td>
+            @endif
+            </td>
+           
+            <td>
+                @if($todo->isComplete() )
+
+                <span class="badge bg-success">Completed</span>
+
+                @endif
+            <form action="/welcome/{{$todo->id}}" method="GET">
+                
+                @csrf 
+                @if(!$todo-> isComplete())
+                <button class="btn btn-secondary btn-sm" input="submit">Complete</button>
+                @endif
+                </form>
+            </td>
 
         </tr>
        
-
         @endforeach
        
 
