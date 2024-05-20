@@ -20,7 +20,16 @@ Route::get('/create', function () {
 //create todo route
 Route::post('/create',[todoController::class,'store'])->name("todo.store");
 
+//edit todo route
+Route::get('/edit/{id}', [todoController::class,'edit']
+ )->name("todo.edit");
 
+
+ //delete todo route
+Route::get('/delete/{id}',[todoController::class,'delete'])->name("todo.delete");
+
+//update todo route
+Route::post('/update',[todoController::class,'updateData'])->name("todo.updateData");
 
 
 

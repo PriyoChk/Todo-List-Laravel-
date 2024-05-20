@@ -16,7 +16,7 @@
             <th>Name</th>
             <th>Work</th>
             <th>Due Date</th>
-           
+            <th>Action</th>
             
         </tr>
         @foreach($todos as $todo)
@@ -25,7 +25,14 @@
             <td>{{$todo->work}}</td>
             <td>{{$todo->dueDate}}</td>
           
+            <td >
             
+            
+            <a href="{{route("todo.edit",$todo->id)}}" class="btn btn-success btn-sm">Update</a>
+            <a href="{{route("todo.delete",$todo->id)}}" class="btn btn-danger btn-sm" >Delete</a>
+        
+    </td>
+
         </tr>
        
 
