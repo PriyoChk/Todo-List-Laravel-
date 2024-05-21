@@ -7,7 +7,9 @@ Route::match(['get', 'post'], '/', [todoController::class, 'login'])->name("todo
 
 Route::post('/', [todoController::class,'login'])->name("todo.login");
 
-
+Route::get('/registration',function(){
+        return view('register');
+});
 
 
 Route::get('/welcome',[todoController::class,'index'])->name("todo.home");

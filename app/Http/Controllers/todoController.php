@@ -35,6 +35,15 @@ class todoController extends Controller
        
         return view('login');
     }
+
+    public function registration()
+    {
+        
+    }
+
+
+
+
     public function index()
     {
         $todos = todos::all();
@@ -100,5 +109,7 @@ class todoController extends Controller
         $todo->save();
         return redirect(route("todo.home"));
     }
+
+
 }
     
