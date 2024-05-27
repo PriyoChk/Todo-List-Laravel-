@@ -22,7 +22,7 @@ Route::get('/welcome', [TodoController::class, 'index'])->name('todo.home')->mid
 
 Route::get('/create', function () {
     return view('create');
-})->name("todo.create");
+})->name("todo.create")->middleware('IsLoggedIn');
 
 
 //create todo route
@@ -30,7 +30,7 @@ Route::post('/create',[todoController::class,'store'])->name("todo.store");
 
 //edit todo route
 Route::get('/edit/{id}', [todoController::class,'edit']
- )->name("todo.edit");
+ )->name("todo.edit")->middleware('IsLoggedIn');
 
 
  //delete todo route

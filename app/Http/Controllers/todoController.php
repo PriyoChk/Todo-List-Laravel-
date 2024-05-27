@@ -8,6 +8,7 @@ use  App\Models\todos;
 use App\Models\User;
 use Hash;
 use App\Http\Controllers\TodoController;
+use App\Notifications\sendEmail;
 
 
 class todoController extends Controller
@@ -156,5 +157,7 @@ class todoController extends Controller
     }
 
 
-}
+
+      }
+
     

@@ -7,9 +7,9 @@
 
 <div class="container">
     <div class="d-flex justify-content-between align-items-center my-5">
-        <div class="h1 text-info">Create/Add Todo
+        <div class="h1 text-warning">Create/Add Todo
         </div>
-        <a href="{{route("todo.home")}}" class = "btn btn-info btn-lg"> Back</a>
+        <a href="{{route("todo.home")}}" class = "btn btn-warning btn-lg"> Back</a>
     </div>
 
     
@@ -37,7 +37,7 @@
                 {{$message}}
                 @enderror></div>
 
-                <button class="btn btn-info btn-lg mt-4">Add</button>
+                <button class="btn btn-warning btn-lg mt-4">Add</button>
             </form>
         </div>
     </div>

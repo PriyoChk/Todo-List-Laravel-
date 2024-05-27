@@ -7,7 +7,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4 col-md-offset-4" style="margin-top:20px;">
-            <div class="h2 text-info">Register</div>
+            <div class="h2 text-warning">Register</div>
             <hr>
             <form action="{{ route('todo.registerUser') }}" method="post">
                 @if(Session::has('success'))
@@ -33,7 +33,7 @@
                     <span class="text-danger">@error('password'){{ $message }} @enderror</span>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-block btn-info" type="submit">Register</button>
+                    <button class="btn btn-block btn-warning" type="submit">Register</button>
                 </div>
                 <br>
                 <a href="{{ route('todo.login') }}">Already Registered? Login!</a>

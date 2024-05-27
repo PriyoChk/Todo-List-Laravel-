@@ -7,9 +7,9 @@
 
 <div class="container">
     <div class="d-flex justify-content-between align-items-center my-5">
-        <div class="h1 text-info">Edit Todo
+        <div class="h1 text-warning">Edit Todo
         </div>
-        <a href="{{route("todo.home")}}" class = "btn btn-info btn-lg"> Back</a>
+        <a href="{{route("todo.home")}}" class = "btn btn-warning btn-lg"> Back</a>
     </div>
 
 
@@ -25,7 +25,7 @@
                 <input type="date" name="dueDate" class="form-control" value="{{$todo->dueDate}}">
 
                 <input type="number" name="id" value="{{$todo->id}}" hidden>
-                <button class="btn btn-info btn-lg mt-4">Update</button>
+                <button class="btn btn-warning btn-lg mt-4">Update</button>
             </form>
         </div>
     </div>
