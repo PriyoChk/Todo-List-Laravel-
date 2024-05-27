@@ -5,14 +5,20 @@ use App\Http\Controllers\todoController;
 
 Route::match(['get', 'post'], '/', [todoController::class, 'login'])->name("todo.login");
 
-Route::post('/', [todoController::class,'login'])->name("todo.login");
-
-Route::get('/registration',function(){
-        return view('register');
-});
+Route::get('/', [TodoController::class, 'showLoginForm'])->name('todo.login')->middleware('alreadyLoggedIn');
 
 
-Route::get('/welcome',[todoController::class,'index'])->name("todo.home");
+// Handle login form submission
+Route::post('/login', [TodoController::class, 'login'])->name('todo.login.post');
+
+Route::get('/logout', [TodoController::class, 'logout'])->name('todo.logout');
+
+Route::get('/registration', [TodoController::class, 'registration'])->name('todo.register')->middleware('alreadyLoggedIn');
+
+Route::post('/registration', [TodoController::class, 'registerUser'])->name('todo.registerUser');
+
+Route::get('/welcome', [TodoController::class, 'index'])->name('todo.home')->middleware('IsLoggedIn');
+
 
 Route::get('/create', function () {
     return view('create');

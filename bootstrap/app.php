@@ -11,7 +11,12 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->alias([
+            'IsLoggedIn' => \App\Http\Middleware\LogChek::class,
+            'alreadyLoggedIn' => \App\Http\Middleware\AlreadyLoggedIn::class,
+        ]);
+
+
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

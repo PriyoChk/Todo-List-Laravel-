@@ -59,7 +59,7 @@
 
     </table>
     <div>
-        <a href=""{{route("todo.login")}}"" class="btn btn-danger btn-lg">Log Out</a>
+        <a href="logout" class="btn btn-danger btn-lg">Log Out</a>
         </div>
 
 </div>
