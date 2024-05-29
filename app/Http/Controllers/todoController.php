@@ -92,10 +92,13 @@ class todoController extends Controller
 
     public function index()
     {
-        $todos = todos::all();
+        $todos = todos::orderBy('Completed_at', 'ASC')
+                      ->orderBy('id', 'ASC')
+                      ->get();
         $data = compact('todos');
         return view("welcome")->with($data);
     }
+    
     public function store(Request $request){
 
         $request->validate(
