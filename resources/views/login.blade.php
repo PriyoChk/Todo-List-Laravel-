@@ -7,7 +7,7 @@
 
 @section('main-section')
 <div class='container'>
-    <div class="h2 text-info">Login</div>
+    <div class="h1 text-warning">Login</div>
     <form method="POST" action="{{ route('todo.login') }}">
         @csrf <!-- CSRF token -->
 
@@ -30,7 +30,7 @@
         </div>
 
         <div class="form-group">
-            <button class="btn btn-block btn-info" type="submit">Login</button>
+            <button class="btn btn-block btn-warning" type="submit">Login</button>
         </div>
         
         <br>

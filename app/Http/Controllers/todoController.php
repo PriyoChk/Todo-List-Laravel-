@@ -84,10 +84,7 @@ class todoController extends Controller
         }
     }
 
-    // public function index()
-    // {
-    //     return view('welcome'); // Assuming you have a welcome.blade.php view
-    // }
+    
 
 
     public function index()
