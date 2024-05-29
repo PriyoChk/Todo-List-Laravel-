@@ -13,7 +13,7 @@ Route::post('/login', [TodoController::class, 'login'])->name('todo.login.post')
 
 Route::get('/logout', [TodoController::class, 'logout'])->name('todo.logout');
 
-Route::get('/registration', [TodoController::class, 'registration'])->name('todo.register')->middleware('alreadyLoggedIn');
+Route::get('/registration', [TodoController::class, 'registration'])->name('todo.register')->middleware('alreadyregister');
 
 Route::post('/registration', [TodoController::class, 'registerUser'])->name('todo.registerUser');
 

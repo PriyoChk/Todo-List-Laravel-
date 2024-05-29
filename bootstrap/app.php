@@ -14,6 +14,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'IsLoggedIn' => \App\Http\Middleware\LogChek::class,
             'alreadyLoggedIn' => \App\Http\Middleware\AlreadyLoggedIn::class,
+            'alreadyregister' => \App\Http\Middleware\registercheck::class
         ]);
 
 
